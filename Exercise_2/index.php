@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Team - Meet Our Team</title>
+    <title>Home Page</title>
     <!-- Font Awesome for Contact Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -16,62 +16,73 @@
     <!-- Header Section -->
     <header class="header">
         <div class="header-title">GROUP-<span>4</span></div>
-        <div class="header-line"></div>
+        <div class="header-search">
+            <form id="searchForm" role="search" aria-label="Search team members">
+                <input id="searchInput" name="q" type="search" placeholder="Search team members..." aria-label="Search team members" />
+                <button type="button" id="searchClear" aria-label="Clear search">&times;</button>
+            </form>
+        </div>
+        <div class="header-menu">
+            <button id="menuToggle" aria-haspopup="true" aria-expanded="false">☰</button>
+            <ul class="menu-list" aria-label="Header menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
     </header>
 
     <div class="container">
         <h1 class="section-title">Meet Our Team</h1>
 
-        <!-- Team Grid Overview -->
+        <!-- Team Grid Overview (reverse-triangle rows: 4,3,2,1) -->
         <section class="team-grid">
-            <!-- Grid Item 1 -->
-            <div class="grid-item">
-                <div class="profile-img-wrapper">
-                    <img src="images/bryan.jpg" alt="Bryan Camayang">
+            <div class="team-row row-4">
+                <div class="grid-item">
+                    <div class="profile-img-wrapper">
+                        <img src="images/bryan.jpg" alt="Bryan Camayang">
+                    </div>
+                    <a href="#bryan-camayang" class="read-more">Read More</a>
                 </div>
-                <a href="#bryan-camayang" class="read-more">Read More</a>
+                <div class="grid-item">
+                    <div class="profile-img-wrapper">
+                        <img src="images/renzo.jpg" alt="Renzo Sheen Malillin">
+                    </div>
+                    <a href="#renzo-sheen" class="read-more">Read More</a>
+                </div>
+                <div class="grid-item">
+                    <div class="profile-img-wrapper">
+                        <img src="images/jerson.jpg" alt="Jerson Santos Turcolas">
+                    </div>
+                    <a href="#jerson-santos" class="read-more">Read More</a>
+                </div>
+                <div class="grid-item">
+                    <div class="profile-img-wrapper">
+                        <img src="images/king.png" alt="Kingfroiland Paor">
+                    </div>
+                    <a href="#kingfroiland-paor" class="read-more">Read More</a>
+                </div>
             </div>
-            <!-- Grid Item 2 -->
-            <div class="grid-item">
-                <div class="profile-img-wrapper">
-                    <img src="images/renzo.jpg" alt="Renzo Sheen Malillin">
+
+            <div class="team-row row-3">
+                <div class="grid-item">
+                    <div class="profile-img-wrapper">
+                        <img src="images/mary.jpg" alt="Mary Estoque">
+                    </div>
+                    <a href="#mary-estoque" class="read-more">Read More</a>
                 </div>
-                <a href="#renzo-sheen" class="read-more">Read More</a>
-            </div>
-            <!-- Grid Item 3 -->
-            <div class="grid-item">
-                <div class="profile-img-wrapper">
-                    <img src="images/jerson.jpg" alt="Jerson Santos Turcolas">
+                <div class="grid-item">
+                    <div class="profile-img-wrapper">
+                        <img src="images/princess.jpg" alt="Princess Famor">
+                    </div>
+                    <a href="#princess-famor" class="read-more">Read More</a>
                 </div>
-                <a href="#jerson-santos" class="read-more">Read More</a>
-            </div>
-            <!-- Grid Item 4 -->
-            <div class="grid-item">
-                <div class="profile-img-wrapper">
-                    <img src="images/king.png" alt="Kingfroiland Paor">
+                <div class="grid-item">
+                    <div class="profile-img-wrapper">
+                        <img src="images/johndel.jpg" alt="Johndel">
+                    </div>
+                    <a href="#johndel" class="read-more">Read More</a>
                 </div>
-                <a href="#kingfroiland-paor" class="read-more">Read More</a>
-            </div>
-            <!-- Grid Item 5 -->
-            <div class="grid-item">
-                <div class="profile-img-wrapper">
-                    <img src="images/mary.jpg" alt="Mary Estoque">
-                </div>
-                <a href="#mary-estoque" class="read-more">Read More</a>
-            </div>
-            <!-- Grid Item 6 -->
-            <div class="grid-item">
-                <div class="profile-img-wrapper">
-                    <img src="images/princess.jpg" alt="Princess Famor">
-                </div>
-                <a href="#princess-famor" class="read-more">Read More</a>
-            </div>
-            <!-- Grid Item 7 -->
-            <div class="grid-item">
-                <div class="profile-img-wrapper">
-                    <img src="images/johndel.jpg" alt="Johndel">
-                </div>
-                <a href="#johndel" class="read-more">Read More</a>
             </div>
         </section>
 
@@ -219,7 +230,19 @@
             </div>
 
         </section>
-    </div>
 
+        <!-- Footer -->
+        
+    </div>
+    <script src="system.js"></script>
+      <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-center">
+                    <div class="footer-brand">GROUP-<span>4</span></div>
+                    <p class="footer-text">IT3J-INTPROG</p>
+                    <p class="copyright">© <span id="year"></span> GROUP-4. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>
