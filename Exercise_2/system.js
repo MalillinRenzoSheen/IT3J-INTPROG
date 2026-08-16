@@ -20,7 +20,7 @@ searchInput.addEventListener("input", function () {
 
 });
 
-// Header menu toggle (click to open/close)
+
 const menuButton = document.getElementById("menuToggle");
 
 const menu = document.querySelector(".header-menu");
