@@ -91,7 +91,7 @@ body {
 
 .header-menu button {
   background: transparent;
-  border: 1px solid rgba(160,164,184,0.08);
+  border: 1px solid rgba(160, 164, 184, 0.08);
   color: var(--text-main);
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
@@ -105,12 +105,12 @@ body {
   right: 0;
   margin-top: 0.5rem;
   background: var(--card-bg);
-  border: 1px solid rgba(160,164,184,0.06);
+  border: 1px solid rgba(160, 164, 184, 0.06);
   border-radius: 8px;
   list-style: none;
   padding: 0.5rem 0;
   min-width: 140px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
   z-index: 40;
 }
 
@@ -122,9 +122,11 @@ body {
   font-size: 0.95rem;
 }
 
-.header-menu .menu-list li a:hover { background: rgba(255,255,255,0.02); color: var(--accent-cyan); }
+.header-menu .menu-list li a:hover {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--accent-cyan);
+}
 
-/* show menu when open (toggled) or when keyboard-focus inside */
 .header-menu.open .menu-list,
 .header-menu:focus-within .menu-list {
   display: block;
@@ -142,16 +144,18 @@ body {
   max-width: calc(100vw - 160px);
   padding: 0.6rem 0.8rem;
   border-radius: 999px;
-  border: 1px solid rgba(160,164,184,0.12);
-  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(160, 164, 184, 0.12);
+  background: rgba(255, 255, 255, 0.02);
   color: var(--text-main);
   outline: none;
-  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+  transition:
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
 }
 
 #searchInput:focus {
   border-color: var(--accent-cyan);
-  box-shadow: 0 0 0 4px rgba(69,162,158,0.06);
+  box-shadow: 0 0 0 4px rgba(69, 162, 158, 0.06);
 }
 
 #searchClear {
@@ -163,11 +167,10 @@ body {
   padding: 0.2rem 0.6rem;
 }
 
-#searchClear:hover { color: var(--text-main); }
+#searchClear:hover {
+  color: var(--text-main);
+}
 
-/* Header search removed */
-
-/* Main Container */
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -182,7 +185,6 @@ body {
   font-weight: 700;
 }
 
-/* Team Grid (Top Section) */
 .team-grid {
   display: block;
   gap: 2.5rem;
@@ -199,16 +201,35 @@ body {
 }
 
 /* Rows for reverse-triangle layout */
-.team-row { display: grid; gap: 2rem; justify-content: center; margin-bottom: 1.5rem; }
-.team-row.row-4 { grid-template-columns: repeat(4, minmax(160px, 1fr)); }
-.team-row.row-3 { grid-template-columns: repeat(3, minmax(160px, 1fr)); }
-.team-row.row-2 { grid-template-columns: repeat(2, minmax(160px, 1fr)); }
-.team-row.row-1 { grid-template-columns: repeat(1, minmax(160px, 1fr)); }
+.team-row {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.team-row.row-4 {
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+}
+.team-row.row-3 {
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+}
+.team-row.row-2 {
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+}
+.team-row.row-1 {
+  grid-template-columns: repeat(1, minmax(160px, 1fr));
+}
 
 @media (max-width: 768px) {
-  .team-row.row-4 { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
-  .team-row.row-3 { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
-  .team-row.row-2 { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
+  .team-row.row-4 {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+  .team-row.row-3 {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
+  .team-row.row-2 {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+  }
 }
 
 /* Gradient Border for Circular Images */
@@ -387,7 +408,10 @@ body {
 }
 
 /* Ensure footer stays at bottom when content is short */
-.site-footer { margin-top: auto; margin-bottom: 0; }
+.site-footer {
+  margin-top: auto;
+  margin-bottom: 0;
+}
 
 .site-footer .footer-inner {
   display: flex;
