@@ -1,34 +1,31 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AJAX . JSON demo</title>
-</head>
+  </head>
 
-<body>
-    <h2>Login Form</h2>
-    <input type="text" id="nameInput" placeholder="Enter your name">
+  <body>
+    <h2>Login Fomm</h2>
+    <input type="text" id="nameInput" placeholder="Enter your name" />
     <button onclick="sendData()">Submit</button>
     <p id="result"></p>
 
     <script>
-        function sendData() {
+      function sendData() {
+        const userName = document.getElementById("nameInput").value;
+        const dataToSend = { name: userName };
 
-            const userName = document.getElementById("nameInput").value;
-            const dataToSend = { name: userName };
-
-            fetch('lab5_process.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(dataToSend)
-            })
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById("result").innerText = data.message;
-                })
-        }
+        fetch("lab5_process.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(dataToSend),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            document.getElementById("result").innerText = data.message;
+          });
+      }
     </script>
-</body>
-
+  </body>
 </html>
