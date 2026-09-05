@@ -1,0 +1,7 @@
+1. readyState is whate state the data is in for example on the code === 4 if the state is 4 the request is in stage 4 and execute
+
+the status tells the result
+
+2 the "true" makes the request async
+
+3.Because the webpage doesnt have to stop and ait for the server. THe user can continue interacting with the webpage while the request is being processed.
