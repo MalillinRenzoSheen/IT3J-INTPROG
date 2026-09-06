@@ -1,0 +1,8 @@
+1.XMLHttptReq or XHR are way more slower to code or way more older and it look messy the Fetch in the other hand are way more cleaner and advanced
+
+2. Because it uses Promises that makes the sequence async and easier to follow
+
+3. .then is if the previous operation succeeds ".then" do this
+.catch is if there's an error run the ".catch"
+
+4. It's just a testing API it doesnt send or post it into the database
